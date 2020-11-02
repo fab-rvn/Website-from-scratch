@@ -74,9 +74,32 @@ nav ul li a {
   display:flex;
   justify-content: space-between;
   flex-flow: row wrap;
+  background-color: #cf2c30;
+  color:white;
+  padding: 30px 60px 0 30px;
 }
 
 .item {
   font-size:8px;
+  text-decoration: none;
+}
+
+li, ul{
+  list-style: none;
+}
+
+.flex-container-2{
+  display:flex;
+  justify-content: flex-start;
+  flex-flow: row-reverse;
+  font-size: 8px;
+  background-color: #cf2c30;
+  color:white;
+  padding: 0 60px 0 30px;
+}
+
+.icon-social {
+  width: 10px;
+
 }
 
