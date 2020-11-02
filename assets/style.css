@@ -1,3 +1,7 @@
+:root {
+  --red: #EF233C;
+  --darkerRed: #D90429;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +9,11 @@
 }
 body {
   font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
 }
 .container {
   width: 960px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 /* NAVBAR */
 header {
@@ -33,43 +37,80 @@ nav ul li {
   margin: 0 .5em;
 }
 nav ul li a {
+  font-size: 1.1em;
   text-decoration: none;
+  color: var(--darkerRed);
 }
-/* GRID LAYOUT */
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 12px;
+nav ul li a:hover {
+  color: var(--red);
 }
-.col-1 {
-  grid-column: 1/3;
-  grid-row: 1;
+/* MAIN SECTION */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+  border-bottom: 1px solid #ddd;
+}
+.row {
+  display: flex;
 }
 .col-4 {
-  grid-column: 1/2;
-  grid-row: 2;
+  flex: 33.3%;
 }
-.col-4.center {
-  grid-column: 2/3;
-  grid-row: 2;
-}
-.col-4.right {
-  grid-column: 3/4;
-  grid-row: 2;
+.col-4:nth-child(2) {
+  margin: 0 12px;
 }
 .col-6 {
-  grid-column: 1/2;
-  grid-row: 3;
+  flex: 50%;
 }
-.col-6.right {
-  grid-column: 2/3;
-  grid-row: 3;
+.col-6:first-child {
+  margin-right: 6px;
 }
+.col-6:last-child {
+  margin-left: 6px;
+}
+/* CTA */
+.cta {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.cta h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: .5em;
+}
+.btn {
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  border-color: var(--red);
+  border-radius: 5px;
+  background-image: linear-gradient(var(--red), var(--darkerRed));
+  background-repeat: repeat-x;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+  width: 300px;
+  outline: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  background-image: linear-gradient(#ED132C, #C80425);
+}
+
+
 
 
 
 /* FOOTER */
+footer {
+  background: var(--red);
+  padding: 2em;
+}
 .flex-container{
   display:flex;
   justify-content: space-between;
