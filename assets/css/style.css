@@ -15,8 +15,11 @@ h3 {
   padding-bottom: .5em;
   text-shadow: 0 -1px 0 rgba(0,0,0,4);
 }
+h4 {
+  margin-bottom: 1em;
+}
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 /* NAVBAR */
@@ -25,7 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 2em 2em 0;
+  padding: 1.5em;
   margin-bottom: 1.5em;
 }
 .logo {
@@ -66,10 +69,16 @@ nav ul li a:hover {
 .col-6 {
   width: 960px;
   height: 300px;
-  background-image: url('/assets/img/dumbbells.jpg');
+  background-image: url('/assets/img/shoes-kids.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
+  cursor: pointer;
+}
+.col-1:hover,
+.col-4:hover,
+.col-6:hover {
+  opacity: .8;
 }
 .col-1 .text,
 .col-4 .text,
@@ -81,10 +90,13 @@ nav ul li a:hover {
 }
 .text {
   color: #f5f5f5;
-  
+}
+.text h2 {
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
 }
 .col-4 {
   flex: 33.3%;
+  position: relative;
 }
 .col-4:first-child {
   background-image: url('/assets/img/fashion-women.jpg');
@@ -94,18 +106,19 @@ nav ul li a:hover {
   background-image: url('/assets/img/feet.jpg');
 }
 .col-4:last-child {
-  background-image: url('/assets/img/brown-shoes.jpg');
+  background-image: url('/assets/img/handbag.jpg');
 }
 .col-6 {
   flex: 50%;
+  position: relative;
 }
 .col-6:first-child {
   margin-right: 6px;
-  background-image: url('/assets/img/feet-1842328_1920.jpg');
+  background-image: url('/assets/img/feet-on-air.jpg');
 }
 .col-6:last-child {
   margin-left: 6px;
-  background-image: url('/assets/img/business.jpg');
+  background-image: url('/assets/img/brown-shoes.jpg');
 }
 .btn-link {
   padding: .5em 1.5em;
@@ -124,11 +137,11 @@ nav ul li a:hover {
 /* CTA */
 .cta {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .cta h2 {
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: .5em;
 }
 .btn {
@@ -148,7 +161,7 @@ nav ul li a:hover {
   transition: all 200ms ease-in-out;
 }
 .btn:hover {
-  background-image: linear-gradient(#ED132C, #C80425);
+  background-image: linear-gradient(#cf2c30, #cf2c30);
 }
 /* FOOTER */
 footer {
@@ -156,35 +169,47 @@ footer {
   color: #fff;
   padding: 2em;
 }
-.flex-container{
-  display:flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  background-color: #cf2c30;
-  color:white;
-  padding: 30px 60px 0 30px;
+footer p {
+  margin-bottom: .25em;
 }
-.item {
-  font-size:8px;
-  text-decoration: none;
-}
-
-li, ul{
+footer ul {
   list-style: none;
 }
-
+footer li {
+  margin: 5px auto;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+i {
+  margin: 0 2px 5px;
+}
+.flex-container{
+  display:flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.item {
+  font-size: 12px;
+  text-decoration: none;
+}
 .flex-container-2{
   display:flex;
   justify-content: flex-start;
   flex-flow: row-reverse;
-  font-size: 8px;
-  background-color: #cf2c30;
-  color:white;
-  padding: 0 60px 0 30px;
+  font-size: 12px;
+}
+.value {
+  margin-bottom: 1em;
 }
 
-.icon-social {
-  width: 10px;
 
-}
+
+
 
