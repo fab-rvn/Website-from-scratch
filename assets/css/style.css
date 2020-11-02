@@ -31,6 +31,12 @@ header {
   padding: 1.5em;
   margin-bottom: 1.5em;
 }
+#brand-name {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  margin-left: .5em;
+}
 .logo {
   position: absolute;
   left: 1em;
@@ -46,10 +52,10 @@ nav ul li {
 nav ul li a {
   font-size: 1.1em;
   text-decoration: none;
-  color: var(--darkerRed);
+  color: var(--red);
 }
 nav ul li a:hover {
-  color: var(--red);
+  color: var(--darkerRed);
 }
 /* MAIN SECTION */
 .wrapper {
@@ -75,11 +81,11 @@ nav ul li a:hover {
   position: relative;
   cursor: pointer;
 }
-.col-1:hover,
+/* .col-1:hover,
 .col-4:hover,
 .col-6:hover {
   opacity: .8;
-}
+} */
 .col-1 .text,
 .col-4 .text,
 .col-6 .text {
@@ -89,10 +95,10 @@ nav ul li a:hover {
   transform: translate(-50%, -50%);
 }
 .text {
-  color: #f5f5f5;
+  color: #fff;
 }
 .text h2 {
-  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  text-shadow: 0 3px 0 rgba(0,0,0,.5);
 }
 .col-4 {
   flex: 33.3%;
@@ -125,14 +131,18 @@ nav ul li a:hover {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1em;
-  border: none;
   border-radius: 5px;
-  background: #fff;
+  border-color: #fff;
+  background-image: linear-gradient(#fff, #dbdbdb);
+  background-repeat: repeat-x;
   text-shadow: 0 1px 0 rgba(255,255,255,.9);
   width: 150px;
   outline: none;
   cursor: pointer;
   transition: all 200ms ease-in-out;
+}
+.btn-link:hover {
+  background-image: linear-gradient(#ededed, #dbdbdb);
 }
 /* CTA */
 .cta {
@@ -161,13 +171,13 @@ nav ul li a:hover {
   transition: all 200ms ease-in-out;
 }
 .btn:hover {
-  background-image: linear-gradient(#cf2c30, #cf2c30);
+  background-image: linear-gradient(#cf2c30, var(--darkerRed));
 }
 /* FOOTER */
 footer {
   background: var(--darkerRed);
   color: #fff;
-  padding: 2em;
+  padding: 1em 2em .5em;
 }
 footer p {
   margin-bottom: .25em;
