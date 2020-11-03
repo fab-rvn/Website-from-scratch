@@ -31,14 +31,14 @@ header {
   padding: 1.5em;
   margin-bottom: 1.5em;
 }
-#hamburger {
-  display: none;
-}
 #brand-name {
   position: absolute;
   bottom: 50%;
   transform: translateY(50%);
   margin-left: .5em;
+}
+.hamburger {
+  display: none;
 }
 .logo {
   position: absolute;
@@ -199,7 +199,7 @@ footer a:hover {
   text-decoration: underline;
 }
 i {
-  margin: 0 2px 5px;
+  margin: .25em 2px 5px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
@@ -227,14 +227,28 @@ i:hover {
 }
 
 @media screen and (max-width: 560px) {
-  #hamburger {
+  header {
+    margin: 1em 0;
+  }
+  .hamburger {
     display: block;
     position: absolute;
     right: 0;
     margin-right: .5em;
   }
-  header {
-    margin: 1em .5em;
+  .rotate {
+    transform: rotate(-45deg);
+  }
+  nav {
+    position: absolute;
+    top: 4em;
+    z-index: 1;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 500ms ease-in-out;
+  }
+  nav.active {
+    transform: translateX(0%);
   }
   nav ul li {
     float: none;
@@ -243,7 +257,11 @@ i:hover {
     justify-content: center;
     align-items: center;
     margin: 0;
-    display: none;
+    padding: 1em;
+    background:var(--red);
+  }
+  nav ul li a {
+    color: #fff;
   }
   .btn-link {
     width: 110px;
