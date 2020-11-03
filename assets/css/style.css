@@ -36,6 +36,7 @@ header {
   bottom: 50%;
   transform: translateY(50%);
   margin-left: .5em;
+  color: var(--red);
 }
 .hamburger {
   display: none;
@@ -199,7 +200,7 @@ footer a:hover {
   text-decoration: underline;
 }
 i {
-  margin: .25em 2px 5px;
+  margin: 1em 2px 5px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
@@ -234,6 +235,7 @@ i:hover {
     display: block;
     position: absolute;
     right: 0;
+    margin-top: 0;
     margin-right: .5em;
   }
   .rotate {
