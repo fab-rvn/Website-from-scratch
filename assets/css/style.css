@@ -16,7 +16,7 @@ h3 {
   text-shadow: 0 -1px 0 rgba(0,0,0,4);
 }
 h4 {
-  margin-bottom: 1em;
+  margin: 1em auto;
 }
 .container {
   max-width: 960px;
@@ -30,6 +30,9 @@ header {
   position: relative;
   padding: 1.5em;
   margin-bottom: 1.5em;
+}
+#hamburger {
+  display: none;
 }
 #brand-name {
   position: absolute;
@@ -102,7 +105,6 @@ nav ul li a:hover {
 }
 .col-4 {
   flex: 33.3%;
-  position: relative;
 }
 .col-4:first-child {
   background-image: url('/assets/img/fashion-women.jpg');
@@ -116,7 +118,6 @@ nav ul li a:hover {
 }
 .col-6 {
   flex: 50%;
-  position: relative;
 }
 .col-6:first-child {
   margin-right: 6px;
@@ -199,6 +200,12 @@ footer a:hover {
 }
 i {
   margin: 0 2px 5px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+i:hover {
+  color: var(--red);
+  background: #fff;
 }
 .flex-container{
   display:flex;
@@ -219,6 +226,38 @@ i {
   margin-bottom: 1em;
 }
 
+@media screen and (max-width: 560px) {
+  #hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: .5em;
+  }
+  header {
+    margin: 1em .5em;
+  }
+  nav ul li {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: none;
+  }
+  .btn-link {
+    width: 110px;
+    padding: 0;
+  }
+  .flex-container {
+    flex-flow: column wrap;
+  }
+  footer h4 {
+    margin: 1em auto;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+}
 
 
 
